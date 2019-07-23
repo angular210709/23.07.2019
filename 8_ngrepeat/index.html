@@ -24,7 +24,7 @@
                 <th>PRICE</th>
                 <th></th>
             </tr>
-            <tr ng-repeat="m in devices">
+            <tr ng-repeat="m in devices | orderBy:'model' | filter:'{ price : '0' }'">
                 <td> {{$index}} </td>
                 <td>{{m.model}}</td>
                 <td>{{m.color}}</td>
